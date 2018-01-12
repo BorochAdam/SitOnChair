@@ -1,0 +1,64 @@
+/*pobieranie czcionki z google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&subset=latin-ext');
+
+/*reset domyślnych styli oraz ustawienie box-sizingu aby paddingi i bordery nie były wliczane do wymiarów*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+
+
+header{
+    color: #fff;
+    background-color: #000;
+}
+
+/*zdefiniowany clearfix*/
+
+.row::before, .row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*definicja szerokości głównej zawartości strony*/
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*sekcja ul w headerze*/
+
+.headerMenu{
+    float: right;
+    list-style-type: none;
+}
+
+ul.headerMenu li{
+    float: left;
+    padding-left: 10px;
+}
+
+/*paragraf z logo w headerze*/
+
+.logo{
+    float: left;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+/*zielony wyraz w logo w headerze*/
+.greenFont{
+    color: deepskyblue;
+}

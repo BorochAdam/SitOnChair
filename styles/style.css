@@ -30,7 +30,7 @@ header{
 
 /*definicja szerokości głównej zawartości strony*/
 .container{
-    width: 1000px;
+    width: 1050px;
     margin: 0 auto;
 }
 
@@ -44,14 +44,20 @@ header{
 ul.headerMenu li{
     float: left;
     padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul.headerMenu li:hover{
+    background-color: #1a1a1a;
 }
 
 /*paragraf z logo w headerze*/
 
 .logo{
     float: left;
-    font-size: 20px;
+    font-size: 16px;
     padding: 10px 0 10px 0;
+    font-weight: 700;
 }
 
 header a{
@@ -60,5 +66,209 @@ header a{
 }
 /*zielony wyraz w logo w headerze*/
 .greenFont{
-    color: deepskyblue;
+    color: #27C7AD;
+}
+
+/*definicja 2 kolumn na całej szerokości dokumentu*/
+.column-2{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+/*sekcja slider - ustawienie odsuniecia od gory i dolu*/
+
+.slider{
+    padding: 100px 0 100px 0;
+    /*ponizej wygenerowany gradient*/
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(186,186,214,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(186,186,214,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(186,186,214,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(186,186,214,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(186,186,214,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(186,186,214,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#babad6', GradientType=0 );
+}
+
+/*grafika krzesła nad gradientem, ktora jest powiekszona */
+
+.chairImage{
+    /*background-image: url("../images/black_chair.png");*/
+    background-image: url("../images/black_chair.png");
+    width: 470px;
+    height: 337px;
+}
+
+h1{
+    font-size: 40px;
+    padding-top: 20px;
+    line-height: 100px;
+}
+
+.column-2Text{
+    word-spacing: 2px;
+
+}
+
+/*stylizacja pseudo przycisku*/
+
+.fakeButton{
+    text-decoration: none;
+    display: block;
+    width: 300px;
+    height: 60px;
+    background-color: #27C7AD;
+    margin: 20px auto 0px auto;
+    color: #fff;
+    line-height: 60px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.fakeButton:hover{
+    margin: 21px auto 0px auto;
+}
+
+/*definicja 3 kolumn na całej szerokości dokumentu*/
+.column-3{
+    width: 33.333%;
+    float: left;
+    text-align: center;
+}
+
+/*wstawianie zdjęć do boksów*/
+
+div .box1{
+    background-image: url("../images/box1_img.jpg");
+    margin: 20px 10px 20px 10px;
+    height: 225px;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    position: relative;
+
+}
+
+div .box2{
+    background-image: url("../images/box2_img.jpg");
+    margin: 20px 10px 20px 10px;
+    height: 225px;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    position: relative;
+
+}
+
+div .box3{
+    width: 100%;
+    height: 250px;
+    border: 1px solid lightgray;
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+}
+
+/*zmiana opacity przy najechaniu kursorem na obrazki*/
+
+div .box1:hover{
+    background-image: url("../images/box1_img.jpg");
+    margin: 20px 10px 20px 10px;
+    height: 225px;
+    opacity: 1;
+    background-repeat: no-repeat;
+}
+
+div .box2:hover{
+    background-image: url("../images/box2_img.jpg");
+    margin: 20px 10px 20px 10px;
+    height: 225px;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+/*klasa nadająca 20 px paddingu*/
+
+.padding20px{
+    padding: 20px 10px 20px 10px;
+}
+
+.container005{
+    width: 5%;
+    float: left;
+    margin-top: 100px;
+    line-height: 100px;
+    color: #27C7AD;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: right;
+    cursor: pointer;
+}
+
+.container09{
+    width: 90%;
+    float: left;
+    text-align: center;
+}
+
+h2{
+    padding: 10px 0;
+    position: relative;
+    display: block;
+    font-size: 18px;
+}
+
+/*zielona linia pod nagłówkiem h2*/
+
+h2::after{
+    content: '';
+    width: 180px;
+    height: 10px;
+    background-color: #27C7AD;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.box3 p{
+
+    font-size: 15px;
+    padding-top: 12px;
+}
+/*niebieski pasek nad zdjęciem w div box2*/
+.box2::after{
+    content: '';
+    width: 100%;
+    height: 80px;
+    background-color: lightgray;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    opacity: 0.7;
+
+}
+
+.box2::after::after{
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    content: 'Chair MARGARITA';
+    width: 10px;
+    height: 10px;
+    background-color: #27C7AD;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+}
+
+.box1::after{
+    content: '';
+    width: 100%;
+    height: 80px;
+    background-color: lightgray;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    opacity: 0.7;
+
 }
